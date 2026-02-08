@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+}
+
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav {
+    background: #34495e;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: #fff;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: #1abc9c;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+section {
+    margin: 60px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service {
+    background: #fff;
+    opacity: 0.9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.service h3 {
+    color: #1abc9c;
+}
+
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+#trofee {
+    width: 5em;
+}
+
+@media(max-width: 768px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        width: 80%;
+    }
+}
+
+header h1, header p {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeSlide 1.5s ease forwards;
+}
+
+canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+@keyframes fadeSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service p {
+    color: black;
+}
+
+.service:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+}
+
+.service img {
+    animation: bounce 1.5s infinite alternate;
+}
+
+.service a {
+    text-decoration: none;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-8px);
+    }
+}
+
+.footer-links a {
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #1abc9c;
+}
+
+#particles {
+    position: absolute;
+    z-index: -9999;
+}
+
+.logo-container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    transition: transform 0.8s ease, filter 0.8s ease;
+}
+
+.logo-container .animate {
+    transform: scale(1.1);
+    /* zoom suave */
+    filter: brightness(1.3);
+    /* aumenta el brillo */
+}
+
+.logo-container img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.logo-container.animate img {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px gold);
+}
+
+.quote-watermark {
+  position: relative;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #feffbc;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  border-radius: 8px;
+  text-align: center;
+  z-index: 1;
+}
+
+/* Comillas como marca de agua */
+.quote-watermark::before,
+.quote-watermark::after {
+  position: absolute;
+  font-size: 8rem;
+  color: #7ce1e1; /* dorado */
+  opacity: 0.2;   /* muy tenue, estilo marca de agua */
+  z-index: -1;    /* detrás del texto */
+}
+
+.quote-watermark::before {
+  content: "“";
+  top: -20px;
+  left: -20px;
+}
+
+.quote-watermark::after {
+  content: "”";
+  bottom: -20px;
+  right: -20px;
+}
+
+.reasons p {
+  color: #fff;              /* texto blanco */
+  margin: 0.8rem 0;         /* espacio entre líneas */
+  font-size: 1rem;          /* tamaño normal, sin aumento */
+  border-left: 3px solid #d4af37; /* línea dorada sutil */
+  padding-left: 0.8rem;     /* separación del texto */
+}
+
+.gradient-bullets {
+  list-style: none;
+  padding: 0;
+}
+
+.gradient-bullets li {
+  color: #fff;       /* texto blanco */
+  font-size: 1rem;
+  margin: 0.8rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.gradient-bullets li::before {
+  content: "o"; 
+  position: absolute;
+  left: 0;
+  font-size: 1.4em; 
+  font-weight: bold;
+  background: linear-gradient(250deg, #fffa00, #4a4615); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+
